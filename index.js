@@ -1,4 +1,9 @@
 const { Client, Intents, Discord } = require('discord.js');
+const express = require('express');
+const app = express();
+
+require('dotenv').config({path:'./.env'});
+const PORT = process.env.PORT;
 
 const client = new Client({ 
   intents: [
@@ -8,8 +13,6 @@ const client = new Client({
     Intents.FLAGS.GUILD_MEMBERS 
   ] 
 });
-
-require('dotenv').config({path:'./.env'});
 
 const prefix = `$`;
 
@@ -94,3 +97,7 @@ client.on("messageCreate", async function (messageCreate) {
 });
 
 client.login(process.env.BOT_TOKEN);
+
+app.listen(PORT, () => {
+  console.log(`Dispenser bot is running on ${ PORT }`);
+});
