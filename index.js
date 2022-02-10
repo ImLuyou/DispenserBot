@@ -18,6 +18,7 @@ const prefix = `$`;
 
 process.setMaxListeners(0);
 
+
 client.on("guildMemberUpdate", (oldMember, newMember) => {
   let channel = client.channels.cache.get('936185869390446602');
   let isPatron = null;
@@ -97,6 +98,12 @@ client.on("messageCreate", async function (messageCreate) {
 });
 
 client.login(process.env.BOT_TOKEN);
+
+app.get('/', (req, res) => {
+  res.send(200).json({
+    title: "Dispenser bot!"
+  });  
+});
 
 app.listen(PORT, () => {
   console.log(`Dispenser bot is running on ${ PORT }`);
