@@ -4,6 +4,9 @@
   "description": "Bot to manage internal Luyou's server functions",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "axios": "^0.25.0",
     "discord.js": "^13.6.0",
