@@ -100,7 +100,7 @@ client.on("messageCreate", async function (messageCreate) {
 client.login(process.env.BOT_TOKEN);
 
 app.get('/', (req, res) => {
-  res.send(200).json({
+  res.sendStatus(200).json({
     title: "Dispenser bot!"
   });  
 });
