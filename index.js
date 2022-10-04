@@ -57,7 +57,7 @@ client.on("messageCreate", async function (messageCreate) {
   switch(command) {
     case 'test':
       message.reply({
-        content: '¿Qué quieres puto?, Deja dormir :A'
+        content: '¿Qué quieres?, Deja dormir :A'
       });
     break;
 
